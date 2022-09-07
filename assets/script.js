@@ -9,6 +9,8 @@ var choicesClass = document.querySelector(".class");
 var feedbackDiv = document.getElementById("feedback");
 var endScreenDiv = document.getElementById("end-screen");
 var userInitials = document.getElementById("initials");
+var submitBtn = document.getElementById("submit");
+
 
 startBtn.addEventListener("click", startGame);
 
@@ -18,8 +20,6 @@ if(endScreenDiv.style.display === "none"){
 else{
     endScreenDiv.style.display = "none"
 }
-
-
 
 function startGame() {
     countDown = 72;
@@ -134,14 +134,27 @@ function endScreen(){
     endScreenDiv.style.display = "block";
 }
 
+submitBtn.addEventListener('click', function(){
+    var initials = userInitials.value;
+
+    // var highscoresList = JSON.parse(window.localStorage.getItem('highscores')) || [];
 
 
-// function saveHighscores() {
-//     var initials = userInitials.value.trim();
+    var highscoresList = [];
+    
+    
+    var newScore = {
+        score: countDown,
+        initials: initials,
+    };
 
-// }
+    highscoresList.push(newScore);
+    window.localStorage.setItem('highscores', JSON.stringify(highscoresList));
+    
 
-
+    window.location.href = 'highscores.html';
+    
+})
 
 var time = setInterval(function timer(){
     countDown--;
