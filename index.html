@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <header>
+        <div id = highscores>
+            <a href="highscores.html">
+                View Highscores
+            </a>
+        </div>
+            
+        <div id = timer >
+            Time: <span id= "time"></span>
+        </div>
+    </header>    
+    
+    <div id = "start-page" class= "start">
+        <h1>
+            Coding Quiz Challenge
+        </h1>
+        
+
+        <p>
+            Try to answer the following javascript-related questions whithin the time limit. Keep in mine that incorrect answers will penalize your score/time by 15 seconds!
+        </p>
+        
+        <button id = "start-button">Start Quiz</button>
+    </div>
+    
+    <div id = "questions-div" class ="hide">
+        <h2 id = "question-sentence">
+
+        </h2>
+
+        <div id = "choice-div" class = "choices">
+
+        </div>
+    </div>
+
+    <div id = "feedback" class="hide"></div>
+
+    <div id = "end-screen" class = "hide">
+        <h2>All Done!</h2>
+        <p>Your score is: <span id = "final-score"></span>.</p>
+        <p>
+            Enter your initials: <input type = "text" id = "initials" max = "3"><button id = "submit">Submit</button>
+        </p>
+    </div>
+
+    <script src = "./assets/questions.js"></script>
+    <script src = "./assets/script.js"></script>
+</body>
+</html>

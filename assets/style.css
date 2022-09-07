@@ -1,0 +1,26 @@
+#highscores{
+    display: inline;
+    text-align: left;
+}
+
+#timer{
+    display: inline;
+    float:right
+}
+
+#start-page{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#start-button{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 8px;   
+}
+
+#questions-div{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
